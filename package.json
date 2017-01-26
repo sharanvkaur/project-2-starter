@@ -1,11 +1,10 @@
 {
-  "name": "express-todo-list",
+  "name": "lorem-blogsum",
   "version": "1.0.0",
-  "description": "Express Todo List",
+  "description": "Lorem Blogsum",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "test": "node test/todo_tests.js"
   },
   "engines": {
     "node": "^6.6.0"
