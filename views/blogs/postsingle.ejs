@@ -1,0 +1,65 @@
+<div class="container wider-panel">
+
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+
+        <div class = "panel panel-default moar-space">
+
+         <div class = "panel-heading" style="background-image: linear-gradient(to bottom,<%= blog.color %> 0,<%= blog.color %> 100%)">
+            <h3 class = "panel-title" style="background-image: linear-gradient(to bottom,<%= blog.color %> 0,<%= blog.color %> 100%); color: black; border-color: <%= blog.color %>; text-shadow: none">
+               <%= post.title %>
+               <a href="/posts/<%= post._id %>/edit">
+               <span class="glyphicon glyphicon-pencil pull-right"></span>
+               </a>
+            </h3>
+         </div>
+
+         <div class = "panel-body text-space">
+            <div class="panel-image">
+              <img src="<%= post.image %>"  height="300px" width="400px">
+            </div>
+            <%= post.content%>
+         </div>
+
+         <div class = "panel-footer">
+            <%= post.updated %>
+                <form method="POST" action="/posts/<%= post._id %>?_method=DELETE">
+                    <button type="submit" class="btn btn-lg btn-link pull-right">
+                    <span class="glyphicon glyphicon-trash"></span>
+                </button>
+                </form>
+         </div>
+        </div>
+      </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+
+          <div class="sidebar-module sidebar-module-inset">
+            <p><a href="/blogs/<%= blog.id %>" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-chevron-left"></span> Back to <%= blog.name %> blog
+              </a></p><br>
+
+            <h4>About</h4>
+              <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+            </ol>
+          </div>
+
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->

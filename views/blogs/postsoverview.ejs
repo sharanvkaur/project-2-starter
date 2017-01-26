@@ -1,0 +1,101 @@
+<div class="container">
+
+    <div class="blog-header">
+      <h1 class="blog-title"><%= currentUser.name%>'s <%= blog.name %> blog</h1>
+      <p class="lead blog-description"><%= blog.description %></p>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-8 blog-main">
+
+
+      <% for (var i = posts.length -1 ; i > -1 ; i--) { %>
+
+        <div class = "panel panel-default">
+         <div class = "panel-heading" style="background-image: linear-gradient(to bottom,<%= blog.color %> 0,<%= blog.color %> 100%); color: black; border-color: <%= blog.color %>; text-shadow: none">
+
+            <h1 class = "panel-title clearfix">
+               <%= posts[i].title %>
+
+               <button class="btn btn-lg btn-link pull-right">
+               <a href="/posts/<%= posts[i]._id %>" class="black">
+               <span class="glyphicon glyphicon-menu-right pull-right"></span>
+               </a>
+               </button>
+            </h1>
+         </div>
+
+         <div class = "panel-body">
+            <div class = "panel-image">
+              <img src="<%= posts[i].image %>" height="300px" width="400px">
+            </div>
+            <p><%= posts[i].content.substring(0,500)%>... <br><br><a href="/posts/<%= posts[i]._id %>">View Full Post</a></p>
+         </div>
+
+         <div class = "panel-footer clearfix">
+              <%= posts[i].updated %>
+
+              <form method="POST" action="/posts/<%= posts[i]._id %>?_method=DELETE">
+                <button type="submit" class="btn btn-lg btn-link pull-right">
+                  <span class="glyphicon glyphicon-trash"></span>
+                </button>
+              </form>
+
+              <button class="btn btn-lg btn-link pull-right">
+                <a href="/posts/<%= posts[i]._id %>/edit" class="black">
+                  <span class="glyphicon glyphicon-pencil pull-right"></span>
+                </a>
+              </button>
+             </div>
+          </div>
+      <%} %>
+    </div><!-- /.blog-main -->
+
+        <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
+          <div class="sidebar-module sidebar-module-inset">
+
+            <h2>
+              <a href="/blogs/<%= blog.id %>/new" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-plus"></span>   Create new post
+              </a>
+            </h2>
+            <h2>
+              <a href="/blogs" class="btn btn-default btn-lg">
+                <span class="glyphicon glyphicon-home"></span>   Back to blogs
+              </a>
+            </h2>
+            <br><br>
+
+
+            <h4>Recent posts</h4>
+            <ul>
+                <% for (var i = posts.length -1 ; i > -1 ; i--) { %>
+                  <li><a href="#"><%= posts[i].title %></a></li>
+                  <% } %>
+                </ul>
+                <br><br>
+
+
+            <h4>About</h4>
+            <p>Etiam porta <em>sem malesuada magna</em> mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+          </div>
+          <div class="sidebar-module">
+            <h4>Archives</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">March 2014</a></li>
+
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Elsewhere</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">GitHub</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+
+      </div><!-- /.row -->
+
+    </div><!-- /.container -->

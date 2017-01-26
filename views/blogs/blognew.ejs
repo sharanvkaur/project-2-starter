@@ -1,0 +1,55 @@
+
+<div class="container">
+ <div class="col-md-12 col-sm-6 col-xs-12">
+  <div class="new-blog panel panel-default">
+
+    <div class="panel-heading clearfix">
+      <h3 class="panel-title">What's your new blog about?</h3>
+    </div>
+
+   <div class="panel-body">
+     <form class="new-blog form-horizontal" method="POST" action="/blogs">
+
+        <div class="form-group">
+          <label class="col-md-2 col-form-label control-label">Name</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" name="name" placeholder="Name">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 col-form-label control-label">About</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" name="description" placeholder="A short description of this blog">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 col-form-label control-label">Color</label>
+          <div class="col-md-10">
+            <input class="form-control" type="color" name="color" value="#fff22f">
+            <small class="text-muted">
+              pick a light color!
+            </small>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-md-2 col-form-label control-label">Image</label>
+          <div class="col-md-10">
+            <input class="form-control" type="text" name="bg" value="http://placehold.it/200x150">
+            <small class="text-muted">
+              Link to an image - max width 200px
+            </small>
+          </div>
+        </div>
+
+        <button class="col-md-12 btn btn-info" type="submit">
+          Create this blog!
+        </button>
+     </form>
+    </div>
+    
+  </div>
+ </div>
+</div>

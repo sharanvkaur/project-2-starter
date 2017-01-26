@@ -1,0 +1,117 @@
+
+body {
+  font-family: Helvetica;
+}
+
+.limit-width {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 10%;
+}
+.form-signin {
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.alert {
+  width: 60%;
+  margin: 0 auto;
+}
+h3 {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.blog-grid {
+  /*background-color: lightcyan;*/
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px dotted;
+  border-radius: 20px;
+}
+
+.blog-new {
+  /*border: 1px dotted;*/
+  border-radius: 20px;
+  height: 290px;
+}
+
+.new-button {
+  margin: 25% auto;
+}
+
+.new-blog {
+  /*max-width: 800px;*/
+  margin: 0 auto;
+}
+
+
+.list {
+  display: block;
+  text-align: center;
+}
+
+img {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+form {
+  display: inline;
+}
+
+.panel-title {
+  font-size: 1.5em;
+}
+.panel-image {
+  padding-right: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.text-space {
+  line-height: 1.2em;
+  text-align: justify;
+  font-size: 1.2em;
+}
+.btn-link {
+  color: black;
+  padding: 0;
+}
+
+.black {
+  color: black;
+}
+
+.noround {
+  border-radius: 0px;
+}

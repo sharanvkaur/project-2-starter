@@ -1,0 +1,49 @@
+<div class="container">
+  <h2>Hello, <%= currentUser.name %>!</h2>
+
+  <div class="row"><h3 class="col-md-8">Here are your blogs...</h3></div><br>
+
+  <div class ="list">
+
+      <div class="col-md-3 blog-new">
+        <h2><a href="/blogs/new" class="btn btn-default btn-lg new-button">
+            <span class="glyphicon glyphicon-plus"></span>
+          </a></h2>
+      </div>
+
+      <% for (var i = 0; i < blogs.length; i++) { %>
+
+          <div class="col-md-3">
+            <div class="blog-grid" style="background-color: <%= blogs[i].color %>">
+
+                  <h3><%= blogs[i].name %></h3>
+                  <img src="<%= blogs[i].bg %>">
+                  <p><%= blogs[i].description.substring(0,31) %></p>
+
+              <div class="btn-group" role="group">
+
+                  <button class="btn btn-default">
+                    <a href="/blogs/<%= blogs[i]._id %>" class="black">
+                      <span class="glyphicon glyphicon-arrow-right"></span>
+                    </a>
+                  </button>
+
+                  <button class="btn btn-default">
+                    <a href="/blogs/<%= blogs[i]._id %>/edit" class="black">
+                      <span class="glyphicon glyphicon-pencil"></span>
+                    </a>
+                  </button>
+
+                  <form method="POST" action="/blogs/<%= blogs[i]._id %>?_method=DELETE">
+                    <button type="submit" class="btn btn-default noround">
+                      <span class="glyphicon glyphicon-remove"></span>
+                    </button>
+                  </form>
+
+              </div>
+            </div>
+          </div>
+
+      <% } %>
+  </div>
+</div>
