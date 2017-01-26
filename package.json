@@ -7,15 +7,11 @@
     "start": "node index.js",
     "test": "node test/todo_tests.js"
   },
-  "engines" : {
-    "node" : "^6.6.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/wdi-sg/express-todo-list-pt1.git"
+  "engines": {
+    "node": "^6.6.0"
   },
   "dependencies": {
-    "bcrypt": "^1.0.2",
+    "bcryptjs": "^2.4.0",
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
     "dotenv": "^4.0.0",
